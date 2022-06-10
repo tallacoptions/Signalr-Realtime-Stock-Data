@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace RealtimeStockDataUsingSignalr.Models
 {
-    public class Stock
+    public class Stock: INotifyPropertyChanged
     {
         private string _last, _lastSize, _bid, _bidSize, _ask, _askSize, _volume, _open, _high, _low;
         public event PropertyChangedEventHandler PropertyChanged;
