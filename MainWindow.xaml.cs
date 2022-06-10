@@ -36,7 +36,7 @@ namespace RealtimeStockDataUsingSignalr
             {
                 new Stock("GOOG"),
                 new Stock("AAPL"),
-                new Stock("FB"),
+                new Stock("META"),
                 new Stock("AMZN"),
                 new Stock("MSFT"),
                 new Stock("TSLA"),
