@@ -10,7 +10,7 @@ namespace RealtimeStockDataUsingSignalr.Models
 {
     public class Stock: INotifyPropertyChanged
     {
-        private string _last, _lastSize, _bid, _bidSize, _ask, _askSize, _volume, _open, _high, _low;
+        private string _last, _lastSize, _bid, _bidSize, _ask, _askSize, _volume, _open, _high, _low, _netChg, _percChg;
         public event PropertyChangedEventHandler PropertyChanged;
 
         public Stock(string ticker)
@@ -135,6 +135,32 @@ namespace RealtimeStockDataUsingSignalr.Models
                 if (value != _low)
                 {
                     _low = value;
+                    NotifyPropertyChanged();
+                }
+            }
+        }
+
+        public string NetChange
+        {
+            get => _netChg;
+            set
+            {
+                if (value != _netChg)
+                {
+                    _netChg = value;
+                    NotifyPropertyChanged();
+                }
+            }
+        }
+
+        public string PercChange
+        {
+            get => _percChg;
+            set
+            {
+                if (value != _percChg)
+                {
+                    _percChg = value;
                     NotifyPropertyChanged();
                 }
             }
