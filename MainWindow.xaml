@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:RealtimeStockDataUsingSignalr"
         mc:Ignorable="d"
-        Title="Realtime Stock Data" Height="350" Width="550">
+        Title="Realtime Stock Data" Height="350" Width="600">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
@@ -28,6 +28,8 @@
                 <DataGridTextColumn Header="Open" Binding="{Binding Path=Open}"/>
                 <DataGridTextColumn Header="High" Binding="{Binding Path=High}"/>
                 <DataGridTextColumn Header="Low" Binding="{Binding Path=Low}"/>
+                <DataGridTextColumn Header="NetChange" Binding="{Binding Path=NetChange}"/>
+                <DataGridTextColumn Header="%Change" Binding="{Binding Path=PercChange}"/>
             </DataGrid.Columns>
         </DataGrid>
     </Grid>
